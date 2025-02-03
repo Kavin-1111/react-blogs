@@ -16,12 +16,20 @@ function App() {
   const [inputDataDesc, setInputDataDesc] = useState("")
   const handleChange = () => {
     // console.log(e.target.value, "FILES")
-    const newData = {
-      name: inputDataName,
-      dec: inputDataDesc,
-      file: inputDataFile
-    }
-    setData([...data, newData])
+    // const newData = {
+    //   name: inputDataName,
+    //   dec: inputDataDesc,
+    //   file: inputDataFile
+    // }
+    // setData([...data, newData])
+    const datas = data.flatMap(item => [item, 
+      {
+        name: inputDataName,
+        dec: inputDataDesc,
+        file: inputDataFile
+      }
+    ])
+    setData(datas)
   };
   function hanlde(e){
 
