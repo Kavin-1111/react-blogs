@@ -85,7 +85,6 @@ const Header = () => {
     setCards(updatedCards);
     setEditingIndex(null);
   };
-
   return (
     <div>
       
@@ -95,14 +94,14 @@ const Header = () => {
           placeholder="Enter card title"
           value={cardTitle}
           onChange={(e) => setCardTitle(e.target.value)}
-          className="p-2 m-2 border border-gray-300 rounded"
+          className="p-2 m-2 border border-gray-300"
         />
         <input
           type="text"
           placeholder="Enter card description"
           value={cardDescription}
           onChange={(e) => setCardDescription(e.target.value)}
-          className="p-2 m-2 border border-gray-300 rounded"
+          className="p-2 m-2 border border-gray-300 "
         />
         <input
           type="text"
@@ -113,7 +112,7 @@ const Header = () => {
         />
         <button
           onClick={handleAddCard}
-          className="mt-2 text-white bg-green-500 px-4 py-2 rounded-md hover:bg-green-700"
+          className="mt-2 text-white bg-blue-500 px-4 py-2"
         >
           Add Card
         </button>
@@ -147,22 +146,22 @@ const Header = () => {
                   />
                   <button
                     onClick={() => handleSaveEdit(index)}
-                    className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-700"
+                    className="bg-blue-500 text-white px-4 py-2"
                   >
                     Save
                   </button>
                 </>
               ) : (
                 <>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h5 className="mb-2 text-2xl">
                     {card.title}
                   </h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  <p className="mb-3 font-normal">
                     {card.description}
                   </p>
                   <button
                     onClick={() => handleLike(index)}
-                    className="mt-2 text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-700"
+                    className="mt-2 text-white bg-blue-500 px-4 py-2"
                   >
                     Like {card.likes}
                   </button>
@@ -172,10 +171,10 @@ const Header = () => {
 
             
             <div className="absolute top-3 right-3 flex space-x-3">
-              <button onClick={() => handleEdit(index)} className="text-blue-500 hover:text-blue-700">
+              <button onClick={() => handleEdit(index)} className="text-blue-500">
                 <Edit size={20} />
               </button>
-              <button onClick={() => handleDelete(index)} className="text-red-500 hover:text-red-700">
+              <button onClick={() => handleDelete(index)} className="text-red-500">
                 <Trash size={20} />
               </button>
             </div>
