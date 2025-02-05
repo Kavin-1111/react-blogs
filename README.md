@@ -1,1 +1,1 @@
-https://vercel.com/kavin-vishnus-projects/react-blog-8yld/AaA3wvc9MVUmkEFZeHJDR7V7ARcn
+https://react-blog-8yld-git-main-kavin-vishnus-projects.vercel.app/
