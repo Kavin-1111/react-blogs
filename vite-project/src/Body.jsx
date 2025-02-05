@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Edit, Trash } from 'lucide-react';
 
-const Header = () => {
+const Body = () => {
   const [cardTitle, setCardTitle] = useState('');
   const [cardDescription, setCardDescription] = useState('');
   const [cardImage, setCardImage] = useState('');
@@ -185,4 +185,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Body;
